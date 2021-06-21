@@ -1,10 +1,16 @@
 <head>
 	<!-- Load plotly.js into the DOM -->
-	<script src='https://cdn.plot.ly/plotly-2.1.0.min.js'></script>
+    <script src='https://cdn.plot.ly/plotly-2.1.0.min.js'></script>
     <link rel='stylesheet' href='./styles.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
 </head>
 
 <body>
-	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div class="container">
+        <h1>World Map with Plot Points</h1>
+        <p>Hover over the points to see more information.</p>
+        <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+        <p class="pt-5">Made with <a href="https://plotly.com/javascript/">plotly.js</a></p>
+    </div>
     <script src='map.js'></script>
 </body>

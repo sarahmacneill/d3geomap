@@ -16,7 +16,7 @@ var data = [{
             '#bebada', '#FFC0CB'
         ],
         line: {
-            width: 0
+            width: 0.5
         }
     },
     name: 'Map',
@@ -29,10 +29,6 @@ var data = [{
 var layout = {
     title: 'Map',
     font: {
-        family: 'sans',
-        size: 6
-    },
-    titlefont: {
         size: 16
     },
     geo: {
@@ -56,10 +52,17 @@ var layout = {
         lataxis: {
             range: [ -60.0, 90.0 ]
           },
+    },
+    margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0,
+        pad: 0
     }
 };
 
 document.addEventListener('DOMContentLoaded', (event) => {
     let myDiv = document.getElementById('myDiv');
-    Plotly.newPlot(myDiv, data, layout);
+    Plotly.newPlot(myDiv, data, layout, {displayModeBar: false, responsive: true});
 });
